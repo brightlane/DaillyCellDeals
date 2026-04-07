@@ -1,29 +1,388 @@
-{
-  "deals": [
-    {
-      "phone": "Galaxy A16 5G",
-      "price": "$0 (with unlimited plan)",
-      "carrier": "Boost Mobile",
-      "bestFor": "Budget unlimited"
-    },
-    {
-      "phone": "Moto G Stylus 2024",
-      "price": "$179.99 unlocked",
-      "carrier": "Any prepaid",
-      "bestFor": "Productivity"
-    },
-    {
-      "phone": "Pixel 10a",
-      "price": "Up to $100 off with plan",
-      "carrier": "Verizon / AT&T",
-      "bestFor": "Photography"
-    },
-    {
-      "phone": "iPhone 17e",
-      "price": "$0 with 2‑year commitment",
-      "carrier": "Boost Mobile",
-      "bestFor": "Families"
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Best Cell Phone Deals 2026 | Daily Auto‑Updated</title>
+  <meta name="description" content="Best cell phone deals 2026: AT&T, Verizon, T-Mobile, Boost, Mint, Consumer Cellular, Jitterbug. Auto‑updated JSON deals every 24h. 100% setup‑and‑forget.">
+  <meta name="keywords" content="cell phone deals,best cell phone plans 2026,cell phone deals AT&T,Verizon phone deals,T-Mobile phone deals,prepaid phones,cheap cell phones,consumer cellular phones,jitterbug phone,free government phone,att prepaid phones,boost mobile plans,mint mobile plans,cell phone store near me,cell phone companies,verizon cell phone plans,att phone plans,cricket wireless phones">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://brightlane.github.io/DaillyCellDeals/">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📱</text></svg>">
+
+  <style>
+    :root {
+      --prm: #007bff;
+      --scd: #28a745;
+      --bg: #f8f9fa;
+      --txt: #212529;
+      --brd: #dee2e6;
+      --shd: 0 2px 6px rgba(0,0,0,.1);
+      --rad: 8px;
+      --trans: all .3s ease;
     }
-  ],
-  "intro_text": "Best cell phone deals for families, seniors, and budget shoppers 2026."
-}
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      line-height: 1.6;
+      color: var(--txt);
+      background: var(--bg);
+    }
+    header {
+      background: #fff;
+      padding: 1rem 0;
+      box-shadow: var(--shd);
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+    h1, h2, h3 {
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    h1 {
+      font-size: 2.2rem;
+      text-align: center;
+      color: var(--prm);
+    }
+    h2 {
+      font-size: 1.8rem;
+      border-bottom: 2px solid var(--prm);
+      padding-bottom: .5rem;
+    }
+    h3 {
+      font-size: 1.4rem;
+    }
+    .hero {
+      background: linear-gradient(135deg, var(--prm), #0056b3);
+      color: #fff;
+      padding: 3rem 1rem;
+      text-align: center;
+      border-radius: var(--rad);
+      margin: 1rem 0;
+    }
+    .hero h1 {
+      margin: 0;
+      font-size: 2.8rem;
+    }
+    .hero p {
+      margin: .5rem 0 1rem 0;
+    }
+    .btn {
+      display: inline-block;
+      background: var(--prm);
+      color: #fff;
+      padding: .75rem 1.5rem;
+      border-radius: var(--rad);
+      text-decoration: none;
+      font-weight: 600;
+      margin: .25rem;
+      transition: var(--trans);
+      border: 0;
+      cursor: pointer;
+    }
+    .btn:hover {
+      background: var(--scd);
+      transform: translateY(-2px);
+      box-shadow: var(--shd);
+    }
+    .btn-danger {
+      background: #dc3545;
+    }
+    .btn-danger:hover {
+      background: #c82333;
+    }
+    .table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 2rem 0;
+      background: #fff;
+      box-shadow: var(--shd);
+      border-radius: var(--rad);
+      overflow: hidden;
+      cursor: pointer;
+    }
+    .table th, .table td {
+      padding: 1rem;
+      text-align: left;
+      border-bottom: 1px solid var(--brd);
+    }
+    .table th {
+      background: var(--prm);
+      color: #fff;
+      font-weight: 600;
+    }
+    .table tr:hover {
+      background: #f1f3f4;
+    }
+    .widget-container {
+      max-width: 800px;
+      margin: 2rem auto;
+      background: #fff;
+      border-radius: var(--rad);
+      box-shadow: var(--shd);
+      padding: 1rem;
+    }
+    .footer {
+      padding: 2rem 0;
+      background: #343a40;
+      color: #fff;
+      text-align: center;
+    }
+    .footer a {
+      color: var(--scd);
+      text-decoration: none;
+    }
+    #updated-at {
+      font-size: .9rem;
+      color: #6c757d;
+      text-align: center;
+      margin: 1rem 0;
+    }
+    #daily-intro {
+      margin: 2rem 0;
+      padding: 1rem;
+      background: #f1f3f5;
+      border-radius: var(--rad);
+      text-align: center;
+      line-height: 1.5;
+    }
+    #daily-intro p {
+      margin: 0;
+    }
+    .section {
+      margin: 2rem 0;
+    }
+    .section p {
+      margin-bottom: .75rem;
+    }
+    .section ul, .section ol {
+      margin: .75rem 0;
+      padding-left: 1.5rem;
+    }
+    .section li {
+      margin: .25rem 0;
+    }
+    .blob {
+      position: absolute;
+      z-index: -1;
+      border-radius: 100%;
+      opacity: .5;
+    }
+    .blob1 {
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, #007bff, #0056b3);
+      top: 20vh;
+      right: 10vw;
+      animation: move 20s infinite alternate;
+    }
+    .blob2 {
+      width: 200px;
+      height: 200px;
+      background: radial-gradient(circle, #28a745, #20c997);
+      top: 60vh;
+      right: 20vw;
+      animation: move 18s infinite alternate;
+    }
+    @keyframes move {
+      0% { transform: translate(0,0) rotate(0); }
+      100% { transform: translate(50px,80px) rotate(10deg); }
+    }
+    @media (max-width: 768px) {
+      .container {
+        padding: 0 .5rem;
+      }
+      h1 {
+        font-size: 1.8rem;
+      }
+      h2 {
+        font-size: 1.5rem;
+      }
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+      .table {
+        font-size: .9rem;
+      }
+      .table th, .table td {
+        padding: .5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- decor blobs -->
+  <div class="blob blob1"></div>
+  <div class="blob blob2"></div>
+
+  <header>
+    <div class="container">
+      <h1>Best Cell Phone Deals 2026</h1>
+      <p>Deals auto‑updated every 24h | Pure HTML + JSON | No backend needed</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Auto‑Updated Cell Phone Deals</h1>
+      <p>These prices and offers refresh automatically from a live JSON feed. No manual editing.</p>
+      <a href="#deals" class="btn">View Live Deals</a>
+      <a href="#widget" class="btn btn-danger">Open Live Widget</a>
+    </section>
+
+    <section id="deals">
+      <h2>Top 10 Cell Phone Deals Comparison 2026</h2>
+      <p>Click anywhere in the deals table to jump down to the LinkConnector widget for the latest offers from AT&T, Verizon, T‑Mobile, Boost, Mint, and Consumer Cellular. All prices are daily‑updated and may change tomorrow.</p>
+      <table id="deals-table" class="table">
+        <thead>
+          <tr>
+            <th>Phone / Model</th>
+            <th>Price / Deal</th>
+            <th>Carrier / Plan</th>
+            <th>Best For</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- filled by JS -->
+        </tbody>
+      </table>
+
+      <p id="updated-at">Deals will auto‑load now.</p>
+
+      <section id="daily-intro">
+        <p id="daily-intro-text">Daily keyword‑rich intro text will rotate here every 24h.</p>
+      </section>
+    </section>
+
+    <section class="section">
+      <h2>Best Cell Phone Plans 2026</h2>
+      <p>The best cell phone plans 2026 balance price, data, and network quality. Here’s what you should look for when choosing a plan:</p>
+      <ul>
+        <li><strong>Unlimited data</strong>: AT&T, Verizon, T‑Mobile, Boost, and Mint all offer true‑unlimited plans from about $30/line.</li>
+        <li><strong>Family plans</strong>: Families get the best savings with 2–4 lines on shared plans from Verizon and AT&T.</li>
+        <li><strong>Prepaid phones</strong>: Perfect for budget shoppers; Cricket, Mint, and Boost give you modern phones without credit checks.</li>
+        <li><strong>Free government phone</strong>: Lifeline programs through major carriers let eligible customers get a free phone and monthly minutes.</li>
+      </ul>
+      <p>Regional intent like <code>cell phone store near me</code> ranks best when the page explains local pickup options and national carriers with store networks.</p>
+    </section>
+
+    <section class="section">
+      <h2>Cheap Prepaid Phones & Consumer Cellular Phones</h2>
+      <p>Cheap prepaid phones under $200 dominate the budget market in 2026. Popular options include:</p>
+      <ul>
+        <li><strong>Consumer cellular phones</strong> for seniors and light users.</li>
+        <li><strong>Jitterbug phone</strong> models with big buttons and simple interfaces.</li>
+        <li><strong>Free government phone</strong> devices through Lifeline partnerships.</li>
+      </ul>
+      <p>These phones pair with no‑contract plans from carriers like AT&T, Verizon, and T‑Mobile, reducing your monthly bill while keeping strong 5G coverage.</p>
+    </section>
+
+    <section class="section">
+      <h2>How to Use This Site</h2>
+      <p>This site is fully auto‑updated every 24 hours:</p>
+      <ol>
+        <li>Your browser loads <code>index.html</code> once.</li>
+        <li>It fetches <code>/data/daily-deals.json</code> to populate the table and intro text.</li>
+        <li>Googlebot sees fresh keyword‑rich text every day, even though the HTML never changes.</li>
+      </ol>
+      <p>Because the core structure is stable and only the JSON content rotates, your site is designed to stay ranked #1 forever.</p>
+    </section>
+
+    <section id="widget" class="widget-container">
+      <h2>Live Cell Phone Deals Widget</h2>
+      <p>Interactive, auto‑updated widget powered by LinkConnector (ID 7949). All links are clickable and go directly to your affiliate offers.</p>
+      <!-- LinkConnector widget (ID 7949) -->
+      <script type="text/javascript">
+        var lcWidgetID = "0079490356";
+        var lcWidgetWidth = "800";
+        var lcWidgetHeight = "600";
+        var lcWidgetATID = "CellPhoneWidget";
+      </script>
+      <script src="https://www.linkconnector.com/member/widget/widget.js" type="text/javascript"></script>
+      <noscript>Please enable JavaScript to view content.</noscript>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>
+        &copy; 2026 Benny “Palmo Kid” Palmarino, Langhorne, PA |
+        <a href="#deals">Auto‑Updated Cell Phone Deals</a>
+      </p>
+      <p>Affiliate via LinkConnector (ID 7949).</p>
+    </div>
+  </footer>
+
+  <!-- FOREVER‑AUTO‑UPDATE ENGINE -->
+  <script>
+    // 1) JSON endpoint (relative to GitHub Pages root)
+    const DEALS_URL = "/data/daily-deals.json";
+
+    // 2) Fallback data (never breaks, always safe)
+    const FALLBACK_DEALS = [
+      { phone: "Galaxy A16 5G",           price: "$0 (with unlimited plan)",      carrier: "Boost Mobile",          bestFor: "Budget unlimited" },
+      { phone: "Moto G Stylus 2024",      price: "$179.99 unlocked",              carrier: "Any prepaid",           bestFor: "Productivity" },
+      { phone: "Pixel 10a",               price: "Up to $100 off with plan",      carrier: "Verizon / AT&T",        bestFor: "Photography" },
+      { phone: "Jitterbug Smart4",        price: "From $149",                     carrier: "Consumer Cellular",     bestFor: "Seniors" },
+      { phone: "iPhone 17e",              price: "$0 with 2‑year commitment",     carrier: "Boost Mobile",          bestFor: "Families" }
+    ];
+
+    // 3) Render the table
+    function renderDeals(deals) {
+      const tbody = document.querySelector("#deals-table tbody");
+      if (!tbody) return;
+      tbody.innerHTML = deals.map(d => `
+        <tr>
+          <td>${d.phone || "Unknown"}</td>
+          <td>${d.price || "—"}</td>
+          <td>${d.carrier || "—"}</td>
+          <td>${d.bestFor || "—"}</td>
+        </tr>
+      `).join("");
+      const now = new Date().toLocaleString();
+      document.getElementById("updated-at").textContent = `Latest deals loaded: ${now}`;
+    }
+
+    // 4) Auto‑rotate daily‑intro keyword text (forever‑safe)
+    const DAILY_INTROS = [
+      "Discover the best cell phone deals 2026 for AT&T, Verizon, T-Mobile, Boost, and Mint Mobile.",
+      "Compare the top cell phone plans 2026 and prepaid phones with no‑contract options.",
+      "Find the cheapest cell phone plans 2026, free government phones, and consumer cellular phones for seniors.",
+      "Search for cell phone store near me to pick up unlocked phones and prepaid plans in person.",
+      "Explore the latest iPhone deals 2026, Galaxy discounts, and budget Android phones under $200.",
+      "Check out the best cell phone deals in Spanish, French, German, and Portuguese for global visitors.",
+      "Learn about the leading cell phone companies 2026 and their unlimited data plans.",
+      "Get the hottest cell phone deals AT&T, Verizon, and T‑Mobile have this week.",
+      "Discover the best cheap prepaid phones 2026 for families, students, and travelers.",
+      "See the latest wireless phone deals 2026 including Jitterbug phones for seniors and free government phones."
+    ];
+
+    function setDailyIntro() {
+      const now = new Date();
+      const dayOfYear = Math.floor((now - new Date(now.getFullYear(), 0, 0)) / 86400000);
+      const idx = dayOfYear % DAILY_INTROS.length;
+      const text = document.getElementById("daily-intro-text");
+      if (text) text.textContent = DAILY_INTROS[idx];
+    }
+
+    // 5) Load JSON + render; fall back to safe array if anything fails
+    fetch(DEALS_URL, { cache: "no-cache" })
+      .then(res => {
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        return res.json();
+      })
+      .then(data => {
+        renderDeals(data.deals || FALLBACK_DEALS);
+        // If JSON also contains its own intro text, use that
+        if (data.intro_text) {
+          document.getElementById("daily-intro-text").textContent = data.intro_text;
+        } else {
+          set
