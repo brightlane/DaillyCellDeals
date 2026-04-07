@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Best Cell Phone Deals 2026 | Auto‑Updated</title>
-  <meta name="description" content="Best cell phone deals 2026: AT&T, Verizon, T-Mobile, Boost, Mint, Consumer Cellular. Auto‑updated JSON deals every 24h. No backend needed.">
-  <meta name="keywords" content="cell phone deals,best cell phone plans 2026,cell phone deals AT&T,Verizon phone deals,T-Mobile phone deals,prepaid phones,cheap cell phones,consumer cellular phones,jitterbug phone,free government phone,att prepaid phones,boost mobile plans,mint mobile plans,cell phone store near me,cell phone companies,verizon cell phone plans,att phone plans,cricket wireless phones">
+  <title>Cell Phone Deals Updated Daily | 2026</title>
+  <meta name="description" content="Fresh cell phone deals updated every 24 hours: AT&T, Verizon, T-Mobile, Boost, Mint, Consumer Cellular. No backend needed.">
+  <meta name="keywords" content="cell phone deals,cell phone deals updated daily,best cell phone plans 2026,cell phone deals AT&T,Verizon phone deals,T-Mobile phone deals,prepaid phones,cheap cell phones,consumer cellular phones,jitterbug phone,free government phone,cell phone store near me,cell phone companies,best cell phone plans,att phone plans,verizon cell phone plans,cricket wireless phones">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://brightlane.github.io/DaillyCellDeals/">
   <style>
@@ -38,19 +38,18 @@
       margin: 0 auto;
       padding: 0 1rem;
     }
-    h1, h2, h3 {
-      font-weight: 700;
-      margin-bottom: .75rem;
-    }
     h1 {
-      font-size: 2.2rem;
+      font-size: 2.8rem;
       text-align: center;
       color: var(--prm);
+      margin-bottom: .5rem;
+      font-weight: 700;
     }
-    h2 {
-      font-size: 1.8rem;
-      border-bottom: 2px solid var(--prm);
-      padding-bottom: .5rem;
+    .tagline {
+      text-align: center;
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      color: #6c757d;
     }
     .hero {
       background: linear-gradient(135deg, #007bff, #0056b3);
@@ -62,8 +61,8 @@
       cursor: pointer;
     }
     .hero h1 {
-      margin: 0;
-      font-size: 2.8rem;
+      margin: 0 0 .5rem 0;
+      font-size: 2.4rem;
     }
     .hero p {
       margin: .5rem 0 1.5rem 0;
@@ -123,14 +122,11 @@
       padding: 1rem;
     }
     .footer {
-      padding: 2rem 0;
+      padding: 1rem 0;
       background: #343a40;
       color: #fff;
       text-align: center;
-    }
-    .footer a {
-      color: #28a745;
-      text-decoration: none;
+      font-size: .9rem;
     }
     .section {
       margin: 2rem 0;
@@ -144,8 +140,8 @@
 
   <header>
     <div class="container">
-      <h1>Best Cell Phone Deals 2026</h1>
-      <p>Deals auto‑updated every 24h | No backend needed</p>
+      <h1>Cell Phone Deals Updated Daily</h1>
+      <p class="tagline">Best offers refreshed every 24 hours | No signup needed</p>
     </div>
   </header>
 
@@ -154,14 +150,14 @@
     <!-- 1. Hero section (clickable to widget) -->
     <section class="hero" id="hero" onclick="scrollToWidget()">
       <h1>Auto‑Updated Cell Phone Deals</h1>
-      <p>Click anywhere on this section to open the Live LinkConnector Widget deals for today.</p>
-      <a class="btn">Open Live Deals Widget</a>
+      <p>Click anywhere here to open today’s live cell phone offers below.</p>
+      <a class="btn">Click for Today’s Live Deals</a>
     </section>
 
     <!-- 2. Deals table (auto‑populated from JSON) -->
     <section id="deals" onclick="scrollToWidget()">
       <h2>Top 10 Cell Phone Deals 2026</h2>
-      <p>Click anywhere in the table below to jump directly to today’s live LinkConnector widget deals.</p>
+      <p>Click anywhere in the table below to jump directly to today’s live deals.</p>
       <table id="deals-table" class="table">
         <thead>
           <tr>
@@ -179,13 +175,10 @@
       <p id="updated-at">Deals will auto‑load now.</p>
     </section>
 
-    <!-- 3. LinkConnector Widget (ID 7949, CellPhoneWidget) -->
+    <!-- 3. Live deals widget (no “LinkConnector” headline credit) -->
     <section id="widget" class="widget-container">
-      <h2>Live Cell Phone Deals Widget</h2>
-      <p>
-        Interactive, auto‑updated widget powered by LinkConnector (ID 7949).
-        All links are clickable and go directly to your affiliate offers.
-      </p>
+      <h2>Today’s Live Cell Phone Offers</h2>
+      <p>All links are live, clickable, and updated by the system every 24 hours.</p>
       <div>
         <script type="text/javascript">
           var lcWidgetID = "0079490356";
@@ -198,18 +191,6 @@
       </div>
     </section>
 
-    <!-- 4. Short explanation for SEO -->
-    <section class="section">
-      <h2>How This Works</h2>
-      <p>Every time a visitor opens this page:</p>
-      <ul>
-        <li>JavaScript loads deals from <code>/data/daily-deals.json</code>.</li>
-        <li>The LinkConnector widget fetches live offers and tracks clicks via cookies.</li>
-        <li>Your affiliate ID <code>0079490356</code> is attached to every click and conversion.</li>
-      </ul>
-      <p>This setup is designed to be 100% “set‑and‑forget” and rank #1 for <code>cell phone deals</code> long‑term.</p>
-    </section>
-
   </main>
 
   <footer class="footer">
@@ -218,7 +199,7 @@
     </div>
   </footer>
 
-  <!-- 5. JS Deals Engine + Widget Click Handler -->
+  <!-- 4. JS Deals Engine + Widget Click Handler -->
   <script>
     const DEALS_URL = "/data/daily-deals.json";
 
